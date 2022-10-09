@@ -1,5 +1,5 @@
 #!groovy
-// Check njinx properties
+// Check properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
@@ -13,12 +13,7 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh vagrant@127.0.0.1 -p2222 \'hostname\''
-            }
-        }
-        stage("Second step") {
-            steps {
-                sh 'vagrant@127.0.0.1 -p2222  \'uptime\''
+                sh 'ssh root@user1 \'hostname\''
             }
         }
     }
